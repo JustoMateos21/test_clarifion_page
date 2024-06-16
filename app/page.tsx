@@ -11,12 +11,8 @@ import PaymentSecurity from "@/components/payments_security";
 import ProductFeatures from "@/components/product/product_features";
 import OfferBox from "@/components/offer_box";
 
-type Props = {
-  page_a: boolean | null;
-  page_b: boolean | null;
-};
-
-const Home: React.FC<Props> = ({ page_a, page_b }) => {
+export function Home() {
+  let page_a: boolean = false;
   return (
     <main className="flex items-center flex-col min-h-screen bg-[#fff]">
       <Header />
@@ -106,6 +102,6 @@ const Home: React.FC<Props> = ({ page_a, page_b }) => {
       <Footer />
     </main>
   );
-};
+}
 
 export default Home;
