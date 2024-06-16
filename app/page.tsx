@@ -1,3 +1,5 @@
+"use client";
+
 import Rating from "@/components/review_rating/rating";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -10,9 +12,15 @@ import Review from "@/components/review_rating/review";
 import PaymentSecurity from "@/components/payments_security";
 import ProductFeatures from "@/components/product/product_features";
 import OfferBox from "@/components/offer_box";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  let page_a: boolean = true;
+  const [pageA, setPageA] = useState<boolean>(false);
+
+  useEffect(() => {
+    setPageA(true);
+  }, []);
+
   return (
     <main className="flex items-center flex-col min-h-screen bg-[#fff]">
       <Header />
@@ -31,7 +39,7 @@ export default function Home() {
             width={300}
             src={"/assets/product.png"}
             className={`object-cover w-full md:w-auto ${
-              page_a === false && "hidden"
+              pageA === false && "hidden"
             }`}
             alt="product"
           />
