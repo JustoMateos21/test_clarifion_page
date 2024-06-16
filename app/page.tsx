@@ -11,7 +11,7 @@ import PaymentSecurity from "@/components/payments_security";
 import ProductFeatures from "@/components/product/product_features";
 import OfferBox from "@/components/offer_box";
 
-export function Home() {
+export default function Home() {
   let page_a: boolean = false;
   return (
     <main className="flex items-center flex-col min-h-screen bg-[#fff]">
@@ -103,5 +103,3 @@ export function Home() {
     </main>
   );
 }
-
-export default Home;
