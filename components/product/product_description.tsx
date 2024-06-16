@@ -13,7 +13,7 @@ type Props = {
 
 const ProductDescription = (props: Props) => {
   return (
-    <section className="flex border border-red-500 items-start justify-around  pt-4 ">
+    <section className="flex   items-start justify-around  pt-4 ">
       <div className="flex  md:p-8 items-center justify-center p-1 rounded-md bg-[#2C7EF8]">
         <Image
           alt="product"

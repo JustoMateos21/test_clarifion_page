@@ -12,7 +12,7 @@ import ProductFeatures from "@/components/product/product_features";
 import OfferBox from "@/components/offer_box";
 
 export default function Home() {
-  let page_a: boolean = false;
+  let page_a: boolean = true;
   return (
     <main className="flex items-center flex-col min-h-screen bg-[#fff]">
       <Header />
@@ -31,7 +31,7 @@ export default function Home() {
             width={300}
             src={"/assets/product.png"}
             className={`object-cover w-full md:w-auto ${
-              (page_a === false || page_a === null) && "hidden"
+              page_a === false && "hidden"
             }`}
             alt="product"
           />
